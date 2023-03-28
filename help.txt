@@ -1,0 +1,20 @@
+Spring boot _ AWS Secret Manager Demo
+
+Steps : 
+1. Create secret in AWS with valid name and also add Key, values in the secret and also create same keys Model class
+2. Add rotation property if needed
+3. Provide the Encryption key while creating secrets
+4. once done add following properties into Application.properties file of project
+
+		# AWS Secret details
+		aws.secret.name=test_secret
+		aws.region.name=eu-central-1
+
+------------------------------------------------
+
+Add following dependency into the project pom.xml file
+
+ 		<dependency>
+            <groupId>software.amazon.awssdk</groupId>
+            <artifactId>secretsmanager</artifactId>
+        </dependency>
